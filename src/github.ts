@@ -4,7 +4,7 @@ import * as core from "@actions/core";
 export function getBaseSHA(context: Context) {
   switch (context.eventName) {
     case "push": {
-      const payload = context.payload.event;
+      const payload = context.payload;
       core.debug(`Push event payload: ${JSON.stringify(payload)}`);
       
       // Check if payload and required fields exist

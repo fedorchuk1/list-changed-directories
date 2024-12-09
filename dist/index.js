@@ -30054,7 +30054,7 @@ const core = __importStar(__nccwpck_require__(7484));
 function getBaseSHA(context) {
     switch (context.eventName) {
         case "push": {
-            const payload = context.payload.event;
+            const payload = context.payload;
             core.debug(`Push event payload: ${JSON.stringify(payload)}`);
             // Check if payload and required fields exist
             if (!payload || !payload.after) {
