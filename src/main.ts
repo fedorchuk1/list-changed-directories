@@ -1,8 +1,6 @@
 import path from "path";
-
 import * as core from "@actions/core";
 import * as github from "@actions/github";
-
 import { gitDiffExists, gitFetch, gitLsFiles } from "./git";
 import { getBaseSHA } from "./github";
 
@@ -38,7 +36,6 @@ export async function run() {
         commonDependencyPaths,
       );
       core.endGroup();
-
       if (isCommonDependencyChanged) {
         core.info("Any common dependency has changed.");
         core.setOutput("changed-directories", candidateDirs);
