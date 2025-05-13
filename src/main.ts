@@ -38,7 +38,7 @@ export async function run() {
       core.endGroup();
       if (isCommonDependencyChanged) {
         core.info("Any common dependency has changed.");
-        core.setOutput("changed-directories", candidateDirs);
+        core.setOutput("changed-directories", "all");
         return;
       }
     }
